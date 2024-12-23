@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Fruits",
+        "description": "Produits frais, riches en vitamines"
+    },
+    {
+        "id": 2,
+        "name": "Produits laitiers",
+        "description": "Produits dérivés du lait, riches en calcium"
+    },
+    {
+        "id": 3,
+        "name": "Produits alimentaires",
+        "description": "Ingrédients et aliments de base pour la cuisine"
+    },
+    {
+        "id": 4,
+        "name": "Électronique",
+        "description": "Appareils électroniques et accessoires"
+    },
+    {
+        "id": 5,
+        "name": "Produits ménagers",
+        "description": "Produits pour l'entretien de la maison"
+    },
+    {
+        "id": 6,
+        "name": "Hygiène personnelle",
+        "description": "Produits pour le soin et la propreté"
+    },
+    {
+        "id": 7,
+        "name": "Fournitures de bureau",
+        "description": "Matériel pour le travail et l'école"
+    }
+]

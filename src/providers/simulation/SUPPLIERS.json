@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Alimentation & Co",
+        "address": "12, Rue des Palmiers, Douala, Cameroun",
+        "contact": "contact@alimentationco.cm"
+    },
+    {
+        "id": 2,
+        "name": "Fournitures GOLFE",
+        "address": "45, Boulevard de l'Indépendance, Yaoundé, Cameroun",
+        "contact": "contact@fournituresgolfe.cm"
+    },
+    {
+        "id": 3,
+        "name": "Matériaux BASSA",
+        "address": "73, Rue de la Paix, Douala, Cameroun",
+        "contact": "contact@materiauxbassa.cm"
+    },
+    {
+        "id": 4,
+        "name": "Distribution NDOUMBE",
+        "address": "109, Avenue Mandela, Yaoundé, Cameroun",
+        "contact": "contact@ndoumbedistribution.cm"
+    },
+    {
+        "id": 5,
+        "name": "Logistique YANG",
+        "address": "88, Rue de la Réunification, Douala, Cameroun",
+        "contact": "contact@logistiqueyang.cm"
+    },
+    {
+        "id": 6,
+        "name": "Fournitures ADOU",
+        "address": "57, Rue des Écoles, Douala, Cameroun",
+        "contact": "contact@fournituresadou.cm"
+    },
+    {
+        "id": 7,
+        "name": "Solutions TechnoCAM",
+        "address": "134, Avenue du Général, Yaoundé, Cameroun",
+        "contact": "contact@technocam.cm"
+    },
+    {
+        "id": 8,
+        "name": "Global Logistique",
+        "address": "43, Rue de la Concorde, Douala, Cameroun",
+        "contact": "contact@globallogistique.cm"
+    },
+    {
+        "id": 9,
+        "name": "Aluminium & Métal",
+        "address": "67, Avenue des Nations Unies, Yaoundé, Cameroun",
+        "contact": "contact@alumetalm.com"
+    },
+    {
+        "id": 10,
+        "name": "Energie SOLARIS",
+        "address": "99, Rue du Marché, Douala, Cameroun",
+        "contact": "contact@energiesolaris.cm"
+    },
+    {
+        "id": 11,
+        "name": "Construction DOUALA",
+        "address": "152, Rue de la Liberté, Douala, Cameroun",
+        "contact": "contact@constructiondouala.cm"
+    },
+    {
+        "id": 12,
+        "name": "Fournitures MOBILIA",
+        "address": "110, Rue des Fleurs, Yaoundé, Cameroun",
+        "contact": "contact@fournituresmobilia.cm"
+    },
+    {
+        "id": 13,
+        "name": "Distributeur FALCON",
+        "address": "83, Rue du Port, Douala, Cameroun",
+        "contact": "contact@distributeurfalcon.cm"
+    },
+    {
+        "id": 14,
+        "name": "Logistique CLARK",
+        "address": "58, Avenue de la Gare, Yaoundé, Cameroun",
+        "contact": "contact@logistiqueclark.cm"
+    },
+    {
+        "id": 15,
+        "name": "Fournitures BERMAN",
+        "address": "120, Rue du Président, Douala, Cameroun",
+        "contact": "contact@fournituresberman.cm"
+    }
+]

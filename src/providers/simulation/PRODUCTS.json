@@ -1,0 +1,452 @@
+[
+    {
+        "id": 1,
+        "name": "Mangue",
+        "description": "Ces mangues sont réputées pour leur chair juteuse et sucrée, avec une légère acidité. Idéales pour les smoothies, les salades de fruits ou à déguster nature.",
+        "price": 19.99,
+        "isStocked": true,
+        "category_id": 1,
+        "supplier_id": 2
+    },
+    {
+        "id": 2,
+        "name": "Goyave",
+        "description": "Produit au Cameroun",
+        "price": 29.99,
+        "isStocked": false,
+        "category_id": 1,
+        "supplier_id": 1
+    },
+    {
+        "id": 3,
+        "name": "Orange",
+        "description": "Bio cultivée sans engrais et pesticides",
+        "price": 9.99,
+        "isStocked": true,
+        "category_id": 1,
+        "supplier_id": 2
+    },
+    {
+        "id": 4,
+        "name": "Banane plantain",
+        "description": "Idéale pour la cuisine africaine, verte ou mûre",
+        "price": 3.99,
+        "isStocked": true,
+        "category_id": 1,
+        "supplier_id": 3
+    },
+    {
+        "id": 5,
+        "name": "Ananas",
+        "description": "Importé du Costa Rica, très sucré",
+        "price": 14.99,
+        "isStocked": false,
+        "category_id": 1,
+        "supplier_id": 2
+    },
+    {
+        "id": 6,
+        "name": "Pomme",
+        "description": "Variété Golden, croquante et juteuse",
+        "price": 0.99,
+        "isStocked": true,
+        "category_id": 1,
+        "supplier_id": 4
+    },
+    {
+        "id": 7,
+        "name": "Poire",
+        "description": "William's, parfaite pour les salades de fruits",
+        "price": 1.29,
+        "isStocked": true,
+        "category_id": 1,
+        "supplier_id": 4
+    },
+    {
+        "id": 8,
+        "name": "Raisin",
+        "description": "Sultane, sans pépins, idéal pour les encas",
+        "price": 5.99,
+        "isStocked": true,
+        "category_id": 1,
+        "supplier_id": 5
+    },
+    {
+        "id": 9,
+        "name": "Kiwi",
+        "description": "Vert, riche en vitamine C",
+        "price": 1.99,
+        "isStocked": true,
+        "category_id": 1,
+        "supplier_id": 3
+    },
+    {
+        "id": 10,
+        "name": "Pamplemousse",
+        "description": "Rose, amertume légère, idéal pour les jus",
+        "price": 2.49,
+        "isStocked": true,
+        "category_id": 1,
+        "supplier_id": 2
+    },
+    {
+        "id": 11,
+        "name": "Tomate cerise",
+        "description": "Petite tomate très sucrée, idéale pour les salades",
+        "price": 2.99,
+        "isStocked": false,
+        "category_id": 1,
+        "supplier_id": 3
+    },
+    {
+        "id": 12,
+        "name": "Yaourt nature",
+        "description": "Yaourt sans sucre ajouté, idéal pour le petit-déjeuner",
+        "price": 0.99,
+        "isStocked": true,
+        "category_id": 2,
+        "supplier_id": 6
+    },
+    {
+        "id": 13,
+        "name": "Lait entier",
+        "description": "1L de lait entier pasteurisé",
+        "price": 1.19,
+        "isStocked": true,
+        "category_id": 2,
+        "supplier_id": 6
+    },
+    {
+        "id": 14,
+        "name": "Fromage cheddar",
+        "description": "Fromage râpé pour les gratins",
+        "price": 2.49,
+        "isStocked": true,
+        "category_id": 2,
+        "supplier_id": 7
+    },
+    {
+        "id": 15,
+        "name": "Beurre doux",
+        "description": "Beurre doux 250g",
+        "price": 1.99,
+        "isStocked": true,
+        "category_id": 2,
+        "supplier_id": 6
+    },
+    {
+        "id": 16,
+        "name": "Console de jeu",
+        "description": "Console dernière génération avec 1 manette",
+        "price": 499.99,
+        "isStocked": true,
+        "category_id": 3,
+        "supplier_id": 8
+    },
+    {
+        "id": 17,
+        "name": "Smartphone android",
+        "description": "Écran AMOLED 6.5 pouces, 128 Go de stockage",
+        "price": 699.99,
+        "isStocked": true,
+        "category_id": 3,
+        "supplier_id": 8
+    },
+    {
+        "id": 18,
+        "name": "Ordinateur portable",
+        "description": "Core i7, 16 Go RAM, 512 Go SSD",
+        "price": 1199.99,
+        "isStocked": true,
+        "category_id": 3,
+        "supplier_id": 9
+    },
+    {
+        "id": 19,
+        "name": "Machine à laver",
+        "description": "Capacité 8 kg, classe énergétique A+++",
+        "price": 349.99,
+        "isStocked": true,
+        "category_id": 3,
+        "supplier_id": 9
+    },
+    {
+        "id": 20,
+        "name": "Détergent lessive",
+        "description": "Détergent liquide pour lavage à la main ou en machine",
+        "price": 5.99,
+        "isStocked": false,
+        "category_id": 4,
+        "supplier_id": 10
+    },
+    {
+        "id": 21,
+        "name": "Assouplissant",
+        "description": "Pour un linge doux et parfumé",
+        "price": 3.49,
+        "isStocked": true,
+        "category_id": 4,
+        "supplier_id": 10
+    },
+    {
+        "id": 22,
+        "name": "Eau minérale",
+        "description": "Bouteille de 1.5L, source naturelle",
+        "price": 0.59,
+        "isStocked": true,
+        "category_id": 5,
+        "supplier_id": 11
+    },
+    {
+        "id": 23,
+        "name": "Jus de mangue",
+        "description": "Sans sucre ajouté, 1L",
+        "price": 2.49,
+        "isStocked": true,
+        "category_id": 5,
+        "supplier_id": 11
+    },
+    {
+        "id": 24,
+        "name": "Café moulu",
+        "description": "100% arabica, torréfaction moyenne",
+        "price": 4.99,
+        "isStocked": false,
+        "category_id": 5,
+        "supplier_id": 12
+    },
+    {
+        "id": 25,
+        "name": "Chocolat chaud",
+        "description": "Préparation instantanée, boîte de 500g",
+        "price": 3.99,
+        "isStocked": true,
+        "category_id": 5,
+        "supplier_id": 12
+    },
+    {
+        "id": 26,
+        "name": "Brosse à dents",
+        "description": "Manuelle, poils souples",
+        "price": 1.49,
+        "isStocked": true,
+        "category_id": 6,
+        "supplier_id": 13
+    },
+    {
+        "id": 27,
+        "name": "Shampoing",
+        "description": "Shampoing fortifiant pour cheveux normaux",
+        "price": 3.99,
+        "isStocked": true,
+        "category_id": 6,
+        "supplier_id": 14
+    },
+    {
+        "id": 28,
+        "name": "Savon de Marseille",
+        "description": "Savon solide traditionnel, 300g",
+        "price": 2.99,
+        "isStocked": false,
+        "category_id": 6,
+        "supplier_id": 13
+    },
+    {
+        "id": 29,
+        "name": "Papier toilette",
+        "description": "Pack de 12 rouleaux",
+        "price": 4.99,
+        "isStocked": true,
+        "category_id": 6,
+        "supplier_id": 14
+    },
+    {
+        "id": 30,
+        "name": "Lampe LED",
+        "description": "Économie d'énergie, 10W, blanc chaud",
+        "price": 6.99,
+        "isStocked": true,
+        "category_id": 7,
+        "supplier_id": 15
+    },
+    {
+        "id": 31,
+        "name": "Câble HDMI",
+        "description": "Câble haute qualité, longueur 2m",
+        "price": 9.99,
+        "isStocked": true,
+        "category_id": 7,
+        "supplier_id": 15
+    },
+    {
+        "id": 32,
+        "name": "Beurre Adjida",
+        "description": "Beurre salé produit localement sans graisse animal.",
+        "price": 2.99,
+        "isStocked": false,
+        "category_id": 2,
+        "supplier_id": 6
+    },
+    {
+        "id": 33,
+        "name": "Camembert",
+        "description": "Fromage camembert de Normandie, 250g",
+        "price": 4.49,
+        "isStocked": false,
+        "category_id": 2,
+        "supplier_id": 7
+    },
+    {
+        "id": 34,
+        "name": "Pain de mie",
+        "description": "Pain de mie complet, sans croûte, 500g",
+        "price": 1.99,
+        "isStocked": true,
+        "category_id": 3,
+        "supplier_id": 8
+    },
+    {
+        "id": 35,
+        "name": "Céréales",
+        "description": "Céréales au chocolat, 375g",
+        "price": 3.49,
+        "isStocked": true,
+        "category_id": 3,
+        "supplier_id": 8
+    },
+    {
+        "id": 36,
+        "name": "Farine de blé",
+        "description": "Farine tout usage, 1kg",
+        "price": 1.89,
+        "isStocked": false,
+        "category_id": 3,
+        "supplier_id": 8
+    },
+    {
+        "id": 37,
+        "name": "Oeufs",
+        "description": "Boîte de 12 oeufs frais",
+        "price": 2.69,
+        "isStocked": false,
+        "category_id": 3,
+        "supplier_id": 8
+    },
+    {
+        "id": 38,
+        "name": "iphone 8",
+        "description": "Téléphone portable, 64Go, écran 6.5 pouces",
+        "price": 249.99,
+        "isStocked": true,
+        "category_id": 4,
+        "supplier_id": 9
+    },
+    {
+        "id": 39,
+        "name": "Écouteurs sans fil",
+        "description": "Écouteurs Bluetooth, autonomie 10h",
+        "price": 49.99,
+        "isStocked": true,
+        "category_id": 4,
+        "supplier_id": 10
+    },
+    {
+        "id": 40,
+        "name": "TV 4K",
+        "description": "Télévision LED 4K UHD, écran 50 pouces",
+        "price": 599.99,
+        "isStocked": true,
+        "category_id": 4,
+        "supplier_id": 9
+    },
+    {
+        "id": 41,
+        "name": "Machine à laver: LG – 7KG – WP-810RD",
+        "description": "Lave-linge frontal, capacité 8kg, semi-automatique",
+        "price": 399.99,
+        "isStocked": false,
+        "category_id": 4,
+        "supplier_id": 11
+    },
+    {
+        "id": 42,
+        "name": "Savon liquide",
+        "description": "Savon liquide antibactérien, 500ml",
+        "price": 2.99,
+        "isStocked": true,
+        "category_id": 5,
+        "supplier_id": 12
+    },
+    {
+        "id": 43,
+        "name": "Shampooing",
+        "description": "Shampooing nourrissant, 250ml",
+        "price": 3.49,
+        "isStocked": true,
+        "category_id": 5,
+        "supplier_id": 12
+    },
+    {
+        "id": 44,
+        "name": "Lessive en poudre",
+        "description": "Lessive pour linge blanc et couleur, 2kg",
+        "price": 8.99,
+        "isStocked": true,
+        "category_id": 5,
+        "supplier_id": 13
+    },
+    {
+        "id": 45,
+        "name": "Liquide vaisselle",
+        "description": "Liquide vaisselle citron, 750ml",
+        "price": 2.49,
+        "isStocked": true,
+        "category_id": 5,
+        "supplier_id": 13
+    },
+    {
+        "id": 46,
+        "name": "Papier toilette",
+        "description": "Pack de 12 rouleaux",
+        "price": 5.99,
+        "isStocked": true,
+        "category_id": 6,
+        "supplier_id": 14
+    },
+    {
+        "id": 47,
+        "name": "Essuie-tout",
+        "description": "Rouleaux d'essuie-tout, pack de 6",
+        "price": 4.99,
+        "isStocked": false,
+        "category_id": 6,
+        "supplier_id": 14
+    },
+    {
+        "id": 48,
+        "name": "Stylo bille",
+        "description": "Stylo bille bleu, pack de 10",
+        "price": 3.49,
+        "isStocked": true,
+        "category_id": 7,
+        "supplier_id": 15
+    },
+    {
+        "id": 49,
+        "name": "Cahier",
+        "description": "Cahier format A4, 96 pages",
+        "price": 2.99,
+        "isStocked": true,
+        "category_id": 7,
+        "supplier_id": 15
+    },
+    {
+        "id": 50,
+        "name": "Clé USB",
+        "description": "Clé USB 32Go, rapide et compacte",
+        "price": 14.99,
+        "isStocked": false,
+        "category_id": 4,
+        "supplier_id": 9
+    }
+]
