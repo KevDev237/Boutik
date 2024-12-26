@@ -1,9 +1,9 @@
 // import "@refinedev/antd/dist/reset.css";
-import  { Dashboard }  from "./components/Dashboard";
+import  Dashboard  from "./components/Dashboard";
 
 function App() {
   return (
-    <Dashboard />
+    <Dashboard/>
   );
 }
 export default App;

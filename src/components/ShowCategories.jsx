@@ -1,20 +1,13 @@
 import MyTable from "./MyTable";
 import CATEGORIES from '../providers/simulation/CATEGORIES.json'
-import { Card, Col, Row, Input, Typography, Space } from "antd";
+import { Card, Col, Row, Typography, Space } from "antd";
 
 const { Title, Text } = Typography
-const { Search } = Input;
 
 function ShowCategories() {
     return <div style={{ margin: 10, padding: 5, paddingBottom: 30 }}>
         <Title>Liste des Categories</Title>
-        <Search
-                placeholder="quel categorie cherchez-vous?"
-                allowClear
-                enterButton="Search"
-                size="large"
-                // onSearch={onSearch}
-            />
+
         <Row>
             {CATEGORIES.map((category) => (
                 <Col md={12} lg={10} xl={6}>

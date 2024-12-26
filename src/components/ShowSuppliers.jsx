@@ -1,21 +1,13 @@
-import { Input, Card, Col, Row, Typography, Space } from 'antd';
+import { Card, Col, Row, Typography, Space } from 'antd';
 import MyTable from "./MyTable";
 import SUPPLIERS from '../providers/simulation/SUPPLIERS.json'
 
 const { Title, Text } = Typography;
-const { Search } = Input;
 
 function ShowSuppliers() {
     return (
         <div style={{ margin: 10, padding: 5, paddingBottom: 30 }}>
             <Title>Liste des Fournisseurs</Title>
-            <Search
-                placeholder="quel Fournisseur cherchez-vous?"
-                allowClear
-                enterButton="Search"
-                size="large"
-                // onSearch={onSearch}
-            />
             <Row>
                 {SUPPLIERS.map((supplier) => (
                     <Col md={12} lg={10} xl={6}>
