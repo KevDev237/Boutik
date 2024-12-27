@@ -1,8 +1,9 @@
 import MyTable from "./MyTable";
 import PRODUCTS from '../providers/simulation/PRODUCTS.json'
-import { Typography } from "antd";
+import { Typography, Input } from "antd";
 
-const { Title } = Typography
+const { Title } = Typography;
+const { Search } = Input;
 
 function ShowProducts() {
     const columns = [
@@ -46,6 +47,14 @@ function ShowProducts() {
 
     return <div style={{ margin: 15, padding: 5, paddingBottom: 30 }}>
         <Title>Liste des Produits</Title>
+        <Search
+            placeholder="quel Produit cherchez-vous?"
+            allowClear
+            enterButton="Search"
+            size="large"
+            style={{marginBottom: 25}}
+        // onSearch={onSearch}
+        />
         <MyTable ColumnProduct={columns} ListProduct={PRODUCTS} />
     </div>
 }

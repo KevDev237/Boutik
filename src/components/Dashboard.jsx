@@ -10,9 +10,8 @@ import ShowProducts from './ShowProducts.jsx';
 import ShowCategories from './ShowCategories.jsx';
 import ShowSuppliers from './ShowSuppliers.jsx';
 
-// import { Header1 } from "./header/index.tsx";
-
 const { Header, Content, Footer, Sider } = Layout;
+
 function getItem(label, key, icon, children) {
   return {
     key,
@@ -21,17 +20,35 @@ function getItem(label, key, icon, children) {
     label,
   };
 }
+
 const items = [
   getItem('Nouveaux', 'navBtnNews', <HomeOutlined />),
   getItem('Produit', 'navBtnProduct', <ProductOutlined />),
   getItem('Categories', 'navBtnCategories', <UngroupOutlined />),
   getItem('Fournisseurs', 'navBtnSupplier', <UserOutlined />),
 ];
+
 const Dashboard = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const [activeKey, setActiveKey] = useState('navBtnNews'); // État pour suivre l'élément actif
+
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  const renderContent = () => {
+    switch (activeKey) {
+      case 'navBtnProduct':
+        return <ShowProducts />;
+      case 'navBtnCategories':
+        return <ShowCategories />;
+      case 'navBtnSupplier':
+        return <ShowSuppliers />;
+      default:
+        return <p>Bienvenue dans votre tableau de bord !</p>;
+    }
+  };
+
   return (
     <Layout
       style={{
@@ -40,7 +57,13 @@ const Dashboard = () => {
     >
       <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
         <div className="demo-logo-vertical" />
-        <Menu theme="dark" defaultSelectedKeys={['navBtnNews']} mode="inline" items={items} />
+        <Menu
+          theme="dark"
+          defaultSelectedKeys={['navBtnNews']}
+          mode="inline"
+          items={items}
+          onClick={(e) => setActiveKey(e.key)} // Mettre à jour l'état actif
+        />
       </Sider>
       <Layout>
         <Header
@@ -59,8 +82,8 @@ const Dashboard = () => {
               margin: '16px 0',
             }}
           >
-            <Breadcrumb.Item>User</Breadcrumb.Item>
-            <Breadcrumb.Item>Bill</Breadcrumb.Item>
+            <Breadcrumb.Item>Tableau de bord</Breadcrumb.Item>
+            <Breadcrumb.Item>{items.find(item => item.key === activeKey)?.label}</Breadcrumb.Item>
           </Breadcrumb>
           <div
             style={{
@@ -70,11 +93,7 @@ const Dashboard = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-            Bill is a cat.
-
-            <ShowProducts/>
-            <ShowCategories/>
-            <ShowSuppliers/>
+            {renderContent()} {/* Affichage dynamique basé sur l'état */}
           </div>
         </Content>
         <Footer
@@ -88,4 +107,5 @@ const Dashboard = () => {
     </Layout>
   );
 };
+
 export default Dashboard;
