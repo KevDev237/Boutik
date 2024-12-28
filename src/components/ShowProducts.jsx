@@ -1,11 +1,16 @@
+import { useList } from "@refinedev/core";
+
 import MyTable from "./MyTable";
-import PRODUCTS from '../providers/simulation/PRODUCTS.json'
 import { Typography, Input } from "antd";
+
 
 const { Title } = Typography;
 const { Search } = Input;
 
 function ShowProducts() {
+
+    const { data, isLoading } = useList({ resource: "PRODUCTS" });
+    
     const columns = [
         // {
         //   title: 'Id',
@@ -33,17 +38,23 @@ function ShowProducts() {
         },
         {
             title: 'Categorie',
-            dataIndex: 'category_id',
+            dataIndex: 'category_name',
             key: 4,
             sorter: true
         },
         {
             title: 'Supplier',
-            dataIndex: 'supplier_id',
+            dataIndex: 'supplier_name',
             key: 5,
             sorter: true
         },
     ];
+
+    let dataSource = data?.data;
+    
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
     return <div style={{ margin: 15, padding: 5, paddingBottom: 30 }}>
         <Title>Liste des Produits</Title>
@@ -52,10 +63,10 @@ function ShowProducts() {
             allowClear
             enterButton="Search"
             size="large"
-            style={{marginBottom: 25}}
+            style={{ marginBottom: 25 }}
         // onSearch={onSearch}
         />
-        <MyTable ColumnProduct={columns} ListProduct={PRODUCTS} />
+        <MyTable ColumnProduct={columns} ListProduct={dataSource} />
     </div>
 }
 

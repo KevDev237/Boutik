@@ -1,11 +1,20 @@
+import { useList } from "@refinedev/core";
+
 import { Card, Col, Row, Typography, Space, Input } from 'antd';
-import MyTable from "./MyTable";
-import SUPPLIERS from '../providers/simulation/SUPPLIERS.json'
 
 const { Title, Text } = Typography;
 const { Search } = Input;
 
 function ShowSuppliers() {
+    const { data, isLoading } = useList({ resource: "SUPPLIERS" });
+    
+    let suppliersList = data?.data;
+    console.log(suppliersList)
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div style={{ margin: 10, padding: 5, paddingBottom: 30 }}>
             <Title>Liste des Fournisseurs</Title>
@@ -17,7 +26,7 @@ function ShowSuppliers() {
             // onSearch={onSearch}
             />
             <Row>
-                {SUPPLIERS.map((supplier) => (
+                {suppliersList.map((supplier) => (
                     <Col md={12} lg={10} xl={6}>
                         <Card
                             bordered={false}

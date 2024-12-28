@@ -1,11 +1,19 @@
-import MyTable from "./MyTable";
-import CATEGORIES from '../providers/simulation/CATEGORIES.json'
+import { useList } from "@refinedev/core";
+
 import { Card, Col, Row, Typography, Space, Input } from "antd";
 
 const { Title, Text } = Typography;
 const { Search } = Input;
 
 function ShowCategories() {
+    const { data, isLoading } = useList({ resource: "CATEGORIES" });
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
+    let categoriesList = data?.data;
+
     return <div style={{ margin: 10, padding: 5, paddingBottom: 30 }}>
         <Title>Liste des Categories</Title>
         <Search
@@ -16,7 +24,7 @@ function ShowCategories() {
         // onSearch={onSearch}
         />
         <Row>
-            {CATEGORIES.map((category) => (
+            {categoriesList.map((category) => (
                 <Col md={12} lg={10} xl={6}>
                     <Card
                         bordered={false}
