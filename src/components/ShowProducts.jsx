@@ -9,10 +9,11 @@ const { Title } = Typography;
 const { Search } = Input;
 
 function ShowProducts() {
-
-    const { data, isLoading } = useList({ resource: "PRODUCTS" });
     const [showStockedOnly, setShowStockedOnly] = useState(false);
+    const [search, setSearch] = useState('');
 
+    const { data, isLoading } = useList({ resource: "PRODUCTS", filters: search });
+    
     const columns = [
         // {
         //   title: 'Id',
@@ -52,7 +53,7 @@ function ShowProducts() {
         },
     ];
 
-    let dataSource = data?.data.filter(product =>{
+    const dataSource = data?.data.filter(product =>{
         if (showStockedOnly && !product.isStocked){
             return false;
         }
@@ -71,9 +72,11 @@ function ShowProducts() {
         <Search
             placeholder="quel Produit cherchez-vous?"
             allowClear
-            enterButton="Search"
+            // enterButton="Search"
             size="large"
             style={{ marginBottom: 10 }}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
         // onSearch={onSearch}
         />
         <Checkbox

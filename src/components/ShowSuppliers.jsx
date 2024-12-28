@@ -1,4 +1,5 @@
 import { useList } from "@refinedev/core";
+import { useState } from "react";
 
 import { Card, Col, Row, Typography, Space, Input } from 'antd';
 
@@ -6,10 +7,10 @@ const { Title, Text } = Typography;
 const { Search } = Input;
 
 function ShowSuppliers() {
-    const { data, isLoading } = useList({ resource: "SUPPLIERS" });
-    
-    let suppliersList = data?.data;
-    console.log(suppliersList)
+    const [searchSupplier, setSearchSupplier] = useState('');
+    const { data, isLoading } = useList({ resource: "SUPPLIERS", filters: searchSupplier });
+
+    const suppliersList = data?.data;
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -21,8 +22,10 @@ function ShowSuppliers() {
             <Search
                 placeholder="quel Fournisseur cherchez-vous?"
                 allowClear
-                enterButton="Search"
+                // enterButton="Search"
                 size="large"
+                value={searchSupplier}
+                onChange={(e) => setSearchSupplier(e.target.value)}
             // onSearch={onSearch}
             />
             <Row>

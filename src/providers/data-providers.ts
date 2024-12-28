@@ -79,10 +79,20 @@ export const dataProvider: DataProvider = {
         await resourceFn(id);
         return { data: { id } };
     },
-    getList: async ({ resource }) => {  
+    getList: async ({ resource, filters = undefined }) => {
         const resourceFn = resourceFunctions[resource]?.getList;
         if (!resourceFn) throw new Error(`getList not implemented for resource "${resource}".`);
-        const response = await resourceFn();
+        let response = await resourceFn();
+        if (filters) {
+            response = response.filter(items => {
+                // concu par GPT pour ignorer les accents
+                const nameWithoutAccents = items.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                const filterWithoutAccents = filters.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                return nameWithoutAccents.toLowerCase().includes(filterWithoutAccents.toLowerCase());
+
+                // return items.name.toLowerCase().includes(filters.toLowerCase());
+            });
+        }
         return { data: response, total: response.length };
     },
     getApiUrl: () => CONTROLLERS,

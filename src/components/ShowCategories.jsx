@@ -1,4 +1,5 @@
 import { useList } from "@refinedev/core";
+import { useState } from "react";
 
 import { Card, Col, Row, Typography, Space, Input } from "antd";
 
@@ -6,21 +7,24 @@ const { Title, Text } = Typography;
 const { Search } = Input;
 
 function ShowCategories() {
-    const { data, isLoading } = useList({ resource: "CATEGORIES" });
+    const [searchCategories, setSearchCategories] = useState('');
+    const { data, isLoading } = useList({ resource: "CATEGORIES", filters: searchCategories });
 
     if (isLoading) {
         return <div>Loading...</div>;
     }
 
-    let categoriesList = data?.data;
+    const categoriesList = data?.data;
 
     return <div style={{ margin: 10, padding: 5, paddingBottom: 30 }}>
         <Title>Liste des Categories</Title>
         <Search
             placeholder="quel Categorie cherchez-vous?"
             allowClear
-            enterButton="Search"
+            // enterButton="Search"
             size="large"
+            value={searchCategories}
+            onChange={(e) => setSearchCategories(e.target.value)}
         // onSearch={onSearch}
         />
         <Row>
