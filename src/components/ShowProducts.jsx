@@ -1,7 +1,8 @@
 import { useList } from "@refinedev/core";
+import { useState } from "react";
 
 import MyTable from "./MyTable";
-import { Typography, Input } from "antd";
+import { Typography, Input, Checkbox } from "antd";
 
 
 const { Title } = Typography;
@@ -10,7 +11,8 @@ const { Search } = Input;
 function ShowProducts() {
 
     const { data, isLoading } = useList({ resource: "PRODUCTS" });
-    
+    const [showStockedOnly, setShowStockedOnly] = useState(false);
+
     const columns = [
         // {
         //   title: 'Id',
@@ -50,8 +52,16 @@ function ShowProducts() {
         },
     ];
 
-    let dataSource = data?.data;
-    
+    let dataSource = data?.data.filter(product =>{
+        if (showStockedOnly && !product.isStocked){
+            return false;
+        }
+        return true;
+    }
+
+    );
+
+
     if (isLoading) {
         return <div>Loading...</div>;
     }
@@ -63,9 +73,15 @@ function ShowProducts() {
             allowClear
             enterButton="Search"
             size="large"
-            style={{ marginBottom: 25 }}
+            style={{ marginBottom: 10 }}
         // onSearch={onSearch}
         />
+        <Checkbox
+            checked={showStockedOnly}
+            onChange={(e) => setShowStockedOnly(e.target.checked)}
+            style={{ marginBottom: 10, paddingLeft: 25 }}>
+            n'afficher que les produits en stock
+        </Checkbox>
         <MyTable ColumnProduct={columns} ListProduct={dataSource} />
     </div>
 }
